@@ -3,5 +3,14 @@
 
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/airflow-operator/airflow:1.10.2', '.']
-images: ['gcr.io/airflow-operator/airflow:1.10.2']
+  args:
+  - build
+  - --build-arg
+  - PYTHON_DEPS=nltk==3.4 numpy==1.16.1 pandas==0.24.1 pandas-gbq==0.9.0 requests==2.21.0 requests-oauthlib==1.2.0 urllib3==1.24.1
+  - -t
+  - eu.gcr.io/$PROJECT_ID/airflow:1.10.2-custom1
+  - .
+images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.2-custom1']
+
+
+
