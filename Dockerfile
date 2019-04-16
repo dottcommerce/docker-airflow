@@ -77,7 +77,6 @@ RUN set -ex \
        fi\
     && pip install 'redis>=2.10.5,<3' \
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
-    && apt-get purge --auto-remove -yqq $buildDeps \
     && apt-get remove -y --purge gcc g++ git\
     && apt-get autoremove -yqq --purge \
     && apt-get clean \
