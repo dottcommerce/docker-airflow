@@ -14,7 +14,7 @@ ENV TERM linux
 # Airflow
 # install from source|pip ?
 ARG INSTALL_FROM=pip
-ARG AIRFLOW_VERSION=1.10.2
+ARG AIRFLOW_VERSION=1.10.5
 ARG AIRFLOW_EXTRAS=async,celery,crypto,jdbc,hdfs,hive,azure,gcp_api,emr,password,postgres,slack,ssh,mysql
 ARG AIRFLOW_HOME=/usr/local/airflow
 ARG AIRFLOW_DEPS=""
@@ -90,6 +90,7 @@ RUN set -ex \
 
 COPY script/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_HOME}/airflow.cfg
+COPY config/custom_logging.py ${AIRFLOW_HOME}/config/custom_logging.py
 
 RUN chown -R airflow: ${AIRFLOW_HOME}
 
