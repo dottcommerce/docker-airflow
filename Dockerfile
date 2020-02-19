@@ -33,6 +33,8 @@ ENV LC_ALL en_US.UTF-8
 ENV LC_CTYPE en_US.UTF-8
 ENV LC_MESSAGES en_US.UTF-8
 
+COPY config/requirements.txt requirements.txt
+
 RUN set -ex \
     && buildDeps=' \
         freetds-dev \
@@ -76,6 +78,7 @@ RUN set -ex \
            pip install --no-cache-dir apache-airflow[$AIRFLOW_EXTRAS]==$AIRFLOW_VERSION;\
        fi\
     && pip install 'redis>=2.10.5,<3' \
+    && pip install -r requirements.txt \    
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
     && apt-get remove -y --purge gcc g++ git\
     && apt-get autoremove -yqq --purge \
