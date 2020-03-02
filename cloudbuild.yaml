@@ -6,6 +6,6 @@ steps:
   args:
   - build
   - -t
-  - eu.gcr.io/$PROJECT_ID/airflow:1.10.5-custom-werkzeug
+  - eu.gcr.io/$PROJECT_ID/airflow:1.10.5-werkzeug-freeze
   - .
-images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.5-custom-werkzeug']
+images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.5-werkzeug-freeze']
