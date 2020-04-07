@@ -19,6 +19,7 @@ Click==7.0
 colorama==0.4.1
 colorlog==4.0.2
 configparser==3.5.3
+criteo_marketing==1.0.164
 croniter==0.3.30
 cryptography==2.7
 Cython==0.29.13
