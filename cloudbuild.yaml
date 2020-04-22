@@ -6,6 +6,6 @@ steps:
   args:
   - build
   - -t
-  - eu.gcr.io/$PROJECT_ID/airflow:1.10.5-werkzeug-criteo
+  - eu.gcr.io/$PROJECT_ID/airflow:1.10.5-werkzeug-parquet
   - .
-images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.5-werkzeug-criteo']
+images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.5-werkzeug-parquet']
