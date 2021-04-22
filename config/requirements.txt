@@ -30,7 +30,7 @@ docutils==0.15.2
 dumb-init==1.2.2
 elasticsearch==7.5.1 
 eventlet==0.25.1
-facebook-business==6.0.2
+facebook-business==10.0.0
 Flask==1.1.1
 Flask-Admin==1.5.3
 Flask-AppBuilder==1.13.1
