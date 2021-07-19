@@ -6,6 +6,6 @@ steps:
   args:
   - build
   - -t
-  - eu.gcr.io/$PROJECT_ID/airflow:1.10.5-fbapi
+  - eu.gcr.io/$PROJECT_ID/airflow:1.10.5-pubsub
   - .
-images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.5-fbapi']
+images: ['eu.gcr.io/$PROJECT_ID/airflow:1.10.5-pubsub']
